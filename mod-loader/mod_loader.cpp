@@ -175,10 +175,10 @@ void InitializeModLoader() {
 	printf("        MIO Mod Loader v%d.%d.%d\n", MOD_LOADER_VERSION_MAJOR, MOD_LOADER_VERSION_MINOR, MOD_LOADER_VERSION_PATCH);
 	printf("==============================================\n");
 
-	LogModLoaderMessage("Mod Loader initialized!");
+	// LogModLoaderMessage("Mod Loader initialized!");
 
-	// Disable DWM for GUI mods (needed on some systems)
-	DisableDWM();
+	// // Disable DWM for GUI mods (needed on some systems)
+	// DisableDWM();
 
-	LoadMods();
+	// LoadMods();
 }
