@@ -2,8 +2,6 @@ name: Build Release
 
 on:
   push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -35,13 +33,4 @@ jobs:
         with:
           name: build-output
           path: |
-            x64/Release/winhttp.dll
-
-      - name: Create GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          draft: true
-          generate_release_notes: true
-          files: |
             x64/Release/winhttp.dll
