@@ -167,9 +167,9 @@ void InitializeModLoader() {
 	// Create modconfig directory if it doesn't exist
 	CreateDirectoryA(".\\modconfig", NULL);
 
-	// AllocConsole();
-	// FILE* f;
-	// freopen_s(&f, "CONOUT$", "w", stdout);
+	AllocConsole();
+	FILE* f;
+	freopen_s(&f, "CONOUT$", "w", stdout);
 
 	printf("==============================================\n");
 	printf("        MIO Mod Loader v%d.%d.%d\n", MOD_LOADER_VERSION_MAJOR, MOD_LOADER_VERSION_MINOR, MOD_LOADER_VERSION_PATCH);
