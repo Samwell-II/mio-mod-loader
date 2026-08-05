@@ -30,3 +30,11 @@ jobs:
       - name: Build DLL
         run: msbuild mod-loader.sln /p:Configuration=Release /p:Platform=x64
         shell: pwsh
+
+      - name: Upload artifacts (for testing)
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            x64/Release/winhttp.dll
+
